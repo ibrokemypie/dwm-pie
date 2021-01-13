@@ -75,7 +75,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "sh", "/home/pie/git/dwm-pie/dmenu.sh", NULL};
+static const char *dmenucmd[] = { "dwm-pie-menu", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsecmd[]  = { "firefox", NULL };
 
@@ -84,11 +84,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,  				        XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,  			XK_Return, spawn,          {.v = browsecmd } },
-	{ Mod1Mask|ShiftMask,  			XK_3, 	   spawn,          SHCMD("$HOME/git/dwm-pie/screenshot.sh") },
-	{ Mod1Mask|ShiftMask|ControlMask,XK_3, 	   spawn,          SHCMD("$HOME/git/dwm-pie/screenshot.sh -c") },
-	{ 0,							XK_Print, 	   spawn,          SHCMD("$HOME/git/dwm-pie/screenshot.sh -c") },
-	{ Mod1Mask|ShiftMask,  			XK_4, 	   spawn,          SHCMD("$HOME/git/dwm-pie/screenshot.sh -s") },
-	{ Mod1Mask|ShiftMask|ControlMask,XK_4, 	   spawn,          SHCMD("$HOME/git/dwm-pie/screenshot.sh -sc") },
+	{ Mod1Mask|ShiftMask,  			XK_3, 	   spawn,          SHCMD("dwm-pie-scrot") },
+	{ Mod1Mask|ShiftMask|ControlMask,XK_3, 	   spawn,          SHCMD("dwm-pie-scrot -c") },
+	{ 0,							XK_Print, 	   spawn,          SHCMD("dwm-pie-scrot -c") },
+	{ Mod1Mask|ShiftMask,  			XK_4, 	   spawn,          SHCMD("dwm-pie-scrot -s") },
+	{ Mod1Mask|ShiftMask|ControlMask,XK_4, 	   spawn,          SHCMD("dwm-pie-scrot -sc") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
