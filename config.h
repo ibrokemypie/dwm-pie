@@ -75,7 +75,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "sh", "/home/pie/dmenu.sh", NULL};
+static const char *dmenucmd[] = { "sh", "/home/pie/git/dwm-pie/dmenu.sh", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsecmd[]  = { "firefox", NULL };
 
